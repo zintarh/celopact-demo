@@ -13,7 +13,7 @@
     "start": "npm run demo"
   },
   "dependencies": {
-    "celopact-sdk": "^0.1.1",
+    "celopact-sdk": "^0.1.0",
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
     "react": "^19.1.0",
