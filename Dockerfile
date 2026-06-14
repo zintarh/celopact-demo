@@ -4,6 +4,6 @@ COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
 RUN npm run ui:build
-RUN ./node_modules/.bin/esbuild server.ts --bundle --platform=node --format=esm --outfile=server.mjs
+RUN npx tsc --project tsconfig.build.json --skipLibCheck
 EXPOSE 8787
-CMD ["node", "server.mjs"]
+CMD ["node", "server.js"]
