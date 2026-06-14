@@ -4,6 +4,6 @@ COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
 RUN npm run ui:build
-RUN ./node_modules/.bin/esbuild server.ts --bundle --platform=node --outfile=server.cjs
+RUN ./node_modules/.bin/esbuild server.ts --bundle --platform=node --format=esm --outfile=server.mjs
 EXPOSE 8787
-CMD ["node", "server.cjs"]
+CMD ["node", "server.mjs"]
